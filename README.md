@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
   <h1><a href="https://conductor.is">Conductor</a></h1>
-  <h3>QuickBooks Desktop API for Node.js and TypeScript</h3>
+  <h3>QuickBooks Desktop API for Node.js, TypeScript, and REST</h3>
   <a href="https://npmjs.com/package/conductor-node"><img src="https://img.shields.io/npm/dm/conductor-node.svg?logo=npm" alt="NPM download count"></a>
   <a href="https://npmjs.org/package/conductor-node"><img src="https://img.shields.io/npm/v/conductor-node.svg?logo=npm" alt="Package version"></a>
   <img src="https://img.shields.io/badge/coverage-100%25-brightgreen" alt="Code coverage">
@@ -23,6 +23,8 @@
 ## What is Conductor?
 
 Conductor is a TypeScript-first Node.js API for **QuickBooks Desktop** (also known as QuickBooks Enterprise). In just a few lines, get real-time access to fetch, create, or update [_any_ QuickBooks Desktop object type](https://docs.conductor.is/qbd/api#supported-object-types) and receive a fully-typed response. Check out [the documentation](https://docs.conductor.is) to get started.
+
+We also offer a [REST API](https://docs.conductor.is/usage/rest).
 
 Conductor, the company, is building a data integration platform for vertical SaaS companies, starting with QuickBooks Desktop. Our team has spent over a decade building companies, scaling vast software systems, and obsessing over quality.
 
