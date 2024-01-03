@@ -15,7 +15,7 @@
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://docs.conductor.is">Docs</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://docs.conductor.is/qbd/examples">Examples</a>
+  <a href="https://docs.conductor.is/qbd-objects">Examples</a>
   <br />
   <hr />
 </div>
