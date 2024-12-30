@@ -910,7 +910,8 @@ export namespace ReceivePaymentCreateParams {
       appliedAmount: string;
 
       /**
-       * The unique identifier of the credit memo to apply to this transaction.
+       * The unique identifier of the credit memo or vendor credit to apply to this
+       * transaction.
        */
       creditMemoId: string;
 
@@ -1252,7 +1253,8 @@ export namespace ReceivePaymentUpdateParams {
       appliedAmount: string;
 
       /**
-       * The unique identifier of the credit memo to apply to this transaction.
+       * The unique identifier of the credit memo or vendor credit to apply to this
+       * transaction.
        */
       creditMemoId: string;
 
