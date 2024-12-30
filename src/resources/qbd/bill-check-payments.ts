@@ -740,10 +740,10 @@ export namespace BillCheckPaymentCreateParams {
       appliedAmount: string;
 
       /**
-       * The unique identifier of the credit memo or vendor credit to apply to this
-       * transaction.
+       * The unique identifier of the credit transaction (credit memo or vendor credit)
+       * to apply to this transaction.
        */
-      creditMemoId: string;
+      creditTransactionId: string;
 
       /**
        * Indicates whether to override the credit.
@@ -892,10 +892,10 @@ export namespace BillCheckPaymentUpdateParams {
       appliedAmount: string;
 
       /**
-       * The unique identifier of the credit memo or vendor credit to apply to this
-       * transaction.
+       * The unique identifier of the credit transaction (credit memo or vendor credit)
+       * to apply to this transaction.
        */
-      creditMemoId: string;
+      creditTransactionId: string;
 
       /**
        * Indicates whether to override the credit.
