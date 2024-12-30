@@ -1925,7 +1925,8 @@ export namespace InvoiceCreateParams {
     appliedAmount: string;
 
     /**
-     * The unique identifier of the credit memo to apply to this transaction.
+     * The unique identifier of the credit memo or vendor credit to apply to this
+     * transaction.
      */
     creditMemoId: string;
 
@@ -2612,7 +2613,8 @@ export namespace InvoiceUpdateParams {
     appliedAmount: string;
 
     /**
-     * The unique identifier of the credit memo to apply to this transaction.
+     * The unique identifier of the credit memo or vendor credit to apply to this
+     * transaction.
      */
     creditMemoId: string;
 
