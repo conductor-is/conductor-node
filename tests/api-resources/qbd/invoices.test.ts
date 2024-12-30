@@ -30,7 +30,11 @@ describe('resource invoices', () => {
       transactionDate: '2019-12-27',
       'Conductor-End-User-Id': 'end_usr_1234567abcdefg',
       applyCredits: [
-        { appliedAmount: '100.00', creditMemoId: 'ABCDEF-1234567890', overrideCreditApplication: false },
+        {
+          appliedAmount: '100.00',
+          creditTransactionId: 'ABCDEF-1234567890',
+          overrideCreditApplication: false,
+        },
       ],
       billingAddress: {
         city: 'San Francisco',
@@ -158,7 +162,11 @@ describe('resource invoices', () => {
       revisionNumber: '1721172183',
       'Conductor-End-User-Id': 'end_usr_1234567abcdefg',
       applyCredits: [
-        { appliedAmount: '100.00', creditMemoId: 'ABCDEF-1234567890', overrideCreditApplication: false },
+        {
+          appliedAmount: '100.00',
+          creditTransactionId: 'ABCDEF-1234567890',
+          overrideCreditApplication: false,
+        },
       ],
       billingAddress: {
         city: 'San Francisco',

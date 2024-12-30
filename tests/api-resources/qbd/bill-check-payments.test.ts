@@ -32,7 +32,11 @@ describe('resource billCheckPayments', () => {
         {
           transactionId: '123ABC-1234567890',
           applyCredits: [
-            { appliedAmount: '100.00', creditMemoId: 'ABCDEF-1234567890', overrideCreditApplication: false },
+            {
+              appliedAmount: '100.00',
+              creditTransactionId: 'ABCDEF-1234567890',
+              overrideCreditApplication: false,
+            },
           ],
           discountAccountId: '80000008-1234567890',
           discountAmount: '50.00',
@@ -95,7 +99,11 @@ describe('resource billCheckPayments', () => {
         {
           transactionId: '123ABC-1234567890',
           applyCredits: [
-            { appliedAmount: '100.00', creditMemoId: 'ABCDEF-1234567890', overrideCreditApplication: false },
+            {
+              appliedAmount: '100.00',
+              creditTransactionId: 'ABCDEF-1234567890',
+              overrideCreditApplication: false,
+            },
           ],
           discountAccountId: '80000008-1234567890',
           discountAmount: '50.00',
