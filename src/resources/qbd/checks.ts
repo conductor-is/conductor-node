@@ -2808,24 +2808,24 @@ export interface CheckListParams extends CursorPageParams {
   payeeIds?: Array<string>;
 
   /**
-   * Query param: Filter for checks whose `refNumber` contains this substring. For
-   * checks, this is the check number. NOTE: If you use this parameter, you cannot
-   * also use `refNumberStartsWith` or `refNumberEndsWith`.
+   * Query param: Filter for checks whose `refNumber` contains this substring. (For
+   * checks, this field is the check number.) NOTE: If you use this parameter, you
+   * cannot also use `refNumberStartsWith` or `refNumberEndsWith`.
    */
   refNumberContains?: string;
 
   /**
-   * Query param: Filter for checks whose `refNumber` ends with this substring. For
-   * checks, this is the check number. NOTE: If you use this parameter, you cannot
-   * also use `refNumberContains` or `refNumberStartsWith`.
+   * Query param: Filter for checks whose `refNumber` ends with this substring. (For
+   * checks, this field is the check number.) NOTE: If you use this parameter, you
+   * cannot also use `refNumberContains` or `refNumberStartsWith`.
    */
   refNumberEndsWith?: string;
 
   /**
    * Query param: Filter for checks whose `refNumber` is greater than or equal to
-   * this value. If omitted, the range will begin with the first number of the list.
-   * Uses a numerical comparison for values that contain only digits; otherwise, uses
-   * a lexicographical comparison.
+   * this value. (For checks, this field is the check number.) If omitted, the range
+   * will begin with the first number of the list. Uses a numerical comparison for
+   * values that contain only digits; otherwise, uses a lexicographical comparison.
    */
   refNumberFrom?: string;
 
@@ -2840,17 +2840,17 @@ export interface CheckListParams extends CursorPageParams {
   refNumbers?: Array<string>;
 
   /**
-   * Query param: Filter for checks whose `refNumber` starts with this substring. For
-   * checks, this is the check number. NOTE: If you use this parameter, you cannot
-   * also use `refNumberContains` or `refNumberEndsWith`.
+   * Query param: Filter for checks whose `refNumber` starts with this substring.
+   * (For checks, this field is the check number.) NOTE: If you use this parameter,
+   * you cannot also use `refNumberContains` or `refNumberEndsWith`.
    */
   refNumberStartsWith?: string;
 
   /**
    * Query param: Filter for checks whose `refNumber` is less than or equal to this
-   * value. If omitted, the range will end with the last number of the list. Uses a
-   * numerical comparison for values that contain only digits; otherwise, uses a
-   * lexicographical comparison.
+   * value. (For checks, this field is the check number.) If omitted, the range will
+   * end with the last number of the list. Uses a numerical comparison for values
+   * that contain only digits; otherwise, uses a lexicographical comparison.
    */
   refNumberTo?: string;
 
