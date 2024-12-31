@@ -409,3 +409,16 @@ Methods:
 - <code title="get /quickbooks-desktop/vendors/{id}">client.qbd.vendors.<a href="./src/resources/qbd/vendors.ts">retrieve</a>(id, { ...params }) -> Vendor</code>
 - <code title="post /quickbooks-desktop/vendors/{id}">client.qbd.vendors.<a href="./src/resources/qbd/vendors.ts">update</a>(id, { ...params }) -> Vendor</code>
 - <code title="get /quickbooks-desktop/vendors">client.qbd.vendors.<a href="./src/resources/qbd/vendors.ts">list</a>({ ...params }) -> VendorsCursorPage</code>
+
+## VendorCredits
+
+Types:
+
+- <code><a href="./src/resources/qbd/vendor-credits.ts">QbdVendorCredit</a></code>
+
+Methods:
+
+- <code title="post /quickbooks-desktop/vendor-credits">client.qbd.vendorCredits.<a href="./src/resources/qbd/vendor-credits.ts">create</a>({ ...params }) -> QbdVendorCredit</code>
+- <code title="get /quickbooks-desktop/vendor-credits/{id}">client.qbd.vendorCredits.<a href="./src/resources/qbd/vendor-credits.ts">retrieve</a>(id, { ...params }) -> QbdVendorCredit</code>
+- <code title="post /quickbooks-desktop/vendor-credits/{id}">client.qbd.vendorCredits.<a href="./src/resources/qbd/vendor-credits.ts">update</a>(id, { ...params }) -> QbdVendorCredit</code>
+- <code title="get /quickbooks-desktop/vendor-credits">client.qbd.vendorCredits.<a href="./src/resources/qbd/vendor-credits.ts">list</a>({ ...params }) -> QbdVendorCreditsCursorPage</code>
