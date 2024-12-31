@@ -171,6 +171,15 @@ export {
 } from './purchase-orders';
 export { Qbd } from './qbd';
 export {
+  QbdVendorCreditsCursorPage,
+  VendorCredits,
+  type QbdVendorCredit,
+  type VendorCreditCreateParams,
+  type VendorCreditRetrieveParams,
+  type VendorCreditUpdateParams,
+  type VendorCreditListParams,
+} from './vendor-credits';
+export {
   ReceivePaymentsCursorPage,
   ReceivePayments,
   type ReceivePayment,
