@@ -3089,13 +3089,18 @@ export interface SalesReceiptUpdateParams {
    * Body param: The sales receipt's line item groups, each representing a predefined
    * set of related items.
    *
-   * **IMPORTANT**: When updating a sales receipt's line item groups, this array
-   * completely REPLACES all existing line item groups for that sales receipt. To
-   * retain any current line item groups, include them in this array, even if they
-   * have not changed. Any line item groups not included will be removed. To add a
-   * new line item group, include it with its `id` set to `-1`. If you do not wish to
-   * modify the line item groups, you can omit this field entirely to keep them
-   * unchanged.
+   * **IMPORTANT**:
+   *
+   * 1. Including this array in your update request will **REPLACE** all existing
+   *    line item groups for the sales receipt with this array. To keep any existing
+   *    line item groups, you must include them in this array even if they have not
+   *    changed. **Any line item groups not included will be removed.**
+   *
+   * 2. To add a new line item group, include it here with the `id` field set to
+   *    `-1`.
+   *
+   * 3. If you do not wish to modify any line item groups, omit this field entirely
+   *    to keep them unchanged.
    */
   lineGroups?: Array<SalesReceiptUpdateParams.LineGroup>;
 
@@ -3103,12 +3108,17 @@ export interface SalesReceiptUpdateParams {
    * Body param: The sales receipt's line items, each representing a single product
    * or service sold.
    *
-   * **IMPORTANT**: When updating a sales receipt's line items, this array completely
-   * REPLACES all existing line items for that sales receipt. To retain any current
-   * line items, include them in this array, even if they have not changed. Any line
-   * items not included will be removed. To add a new line item, include it with its
-   * `id` set to `-1`. If you do not wish to modify the line items, you can omit this
-   * field entirely to keep them unchanged.
+   * **IMPORTANT**:
+   *
+   * 1. Including this array in your update request will **REPLACE** all existing
+   *    line items for the sales receipt with this array. To keep any existing line
+   *    items, you must include them in this array even if they have not changed.
+   *    **Any line items not included will be removed.**
+   *
+   * 2. To add a new line item, include it here with the `id` field set to `-1`.
+   *
+   * 3. If you do not wish to modify any line items, omit this field entirely to keep
+   *    them unchanged.
    */
   lines?: Array<SalesReceiptUpdateParams.Line>;
 
@@ -3288,12 +3298,17 @@ export namespace SalesReceiptUpdateParams {
      * The sales receipt line group's line items, each representing a single product or
      * service sold.
      *
-     * **IMPORTANT**: When updating a sales receipt line group's line items, this array
-     * completely REPLACES all existing line items for that sales receipt line group.
-     * To retain any current line items, include them in this array, even if they have
-     * not changed. Any line items not included will be removed. To add a new line
-     * item, include it with its `id` set to `-1`. If you do not wish to modify the
-     * line items, you can omit this field entirely to keep them unchanged.
+     * **IMPORTANT**:
+     *
+     * 1. Including this array in your update request will **REPLACE** all existing
+     *    line items for the sales receipt line group with this array. To keep any
+     *    existing line items, you must include them in this array even if they have
+     *    not changed. **Any line items not included will be removed.**
+     *
+     * 2. To add a new line item, include it here with the `id` field set to `-1`.
+     *
+     * 3. If you do not wish to modify any line items, omit this field entirely to keep
+     *    them unchanged.
      */
     lines?: Array<LineGroup.Line>;
 
