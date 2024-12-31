@@ -125,12 +125,8 @@ export interface ReceivePayment {
   exchangeRate: number | null;
 
   /**
-   * A globally unique identifier (GUID) you can provide for tracking this object in
-   * your external system.
-   *
-   * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
-   * return an error. This field is immutable and can only be set during object
-   * creation.
+   * A globally unique identifier (GUID) you, the developer, can provide for tracking
+   * this object in your external system.
    */
   externalId: string | null;
 
@@ -184,8 +180,8 @@ export interface ReceivePayment {
   totalAmount: string;
 
   /**
-   * The total monetary amount for this receive-payment converted to the home
-   * currency of the QuickBooks company file. Represented as a decimal string.
+   * The total monetary amount of this receive-payment converted to the home currency
+   * of the QuickBooks company file. Represented as a decimal string.
    */
   totalAmountInHomeCurrency: string | null;
 
@@ -798,8 +794,8 @@ export interface ReceivePaymentCreateParams {
   exchangeRate?: number;
 
   /**
-   * Body param: A globally unique identifier (GUID) you can provide for tracking
-   * this object in your external system.
+   * Body param: A globally unique identifier (GUID) you, the developer, can provide
+   * for tracking this object in your external system.
    *
    * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
    * return an error. This field is immutable and can only be set during object

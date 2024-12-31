@@ -76,7 +76,7 @@ export interface Check {
   amount: string;
 
   /**
-   * The monetary amount for this check converted to the home currency of the
+   * The monetary amount of this check converted to the home currency of the
    * QuickBooks company file. Represented as a decimal string.
    */
   amountInHomeCurrency: string | null;
@@ -119,12 +119,8 @@ export interface Check {
   expenseLines: Array<Check.ExpenseLine>;
 
   /**
-   * A globally unique identifier (GUID) you can provide for tracking this object in
-   * your external system.
-   *
-   * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
-   * return an error. This field is immutable and can only be set during object
-   * creation.
+   * A globally unique identifier (GUID) you, the developer, can provide for tracking
+   * this object in your external system.
    */
   externalId: string | null;
 
@@ -1610,8 +1606,8 @@ export interface CheckCreateParams {
   expenseLines?: Array<CheckCreateParams.ExpenseLine>;
 
   /**
-   * Body param: A globally unique identifier (GUID) you can provide for tracking
-   * this object in your external system.
+   * Body param: A globally unique identifier (GUID) you, the developer, can provide
+   * for tracking this object in your external system.
    *
    * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
    * return an error. This field is immutable and can only be set during object

@@ -113,12 +113,8 @@ export interface Bill {
   expenseLines: Array<Bill.ExpenseLine>;
 
   /**
-   * A globally unique identifier (GUID) you can provide for tracking this object in
-   * your external system.
-   *
-   * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
-   * return an error. This field is immutable and can only be set during object
-   * creation.
+   * A globally unique identifier (GUID) you, the developer, can provide for tracking
+   * this object in your external system.
    */
   externalId: string | null;
 
@@ -168,8 +164,8 @@ export interface Bill {
   objectType: 'qbd_bill';
 
   /**
-   * The remaining amount owed on this bill after subtracting any credits or
-   * discounts from the `openAmount`. Represented as a decimal string.
+   * The remaining amount still owed on this bill, represented as a decimal string.
+   * This equals the bill's amount minus any credits or discounts.
    */
   openAmount: string;
 
@@ -1640,8 +1636,8 @@ export interface BillCreateParams {
   expenseLines?: Array<BillCreateParams.ExpenseLine>;
 
   /**
-   * Body param: A globally unique identifier (GUID) you can provide for tracking
-   * this object in your external system.
+   * Body param: A globally unique identifier (GUID) you, the developer, can provide
+   * for tracking this object in your external system.
    *
    * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
    * return an error. This field is immutable and can only be set during object
