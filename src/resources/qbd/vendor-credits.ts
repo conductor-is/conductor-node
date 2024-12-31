@@ -8,7 +8,7 @@ export class VendorCredits extends APIResource {
   /**
    * Creates a new vendor credit.
    */
-  create(params: VendorCreditCreateParams, options?: Core.RequestOptions): Core.APIPromise<QbdVendorCredit> {
+  create(params: VendorCreditCreateParams, options?: Core.RequestOptions): Core.APIPromise<VendorCredit> {
     const { 'Conductor-End-User-Id': conductorEndUserId, ...body } = params;
     return this._client.post('/quickbooks-desktop/vendor-credits', {
       body,
@@ -24,7 +24,7 @@ export class VendorCredits extends APIResource {
     id: string,
     params: VendorCreditRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<QbdVendorCredit> {
+  ): Core.APIPromise<VendorCredit> {
     const { 'Conductor-End-User-Id': conductorEndUserId } = params;
     return this._client.get(`/quickbooks-desktop/vendor-credits/${id}`, {
       ...options,
@@ -39,7 +39,7 @@ export class VendorCredits extends APIResource {
     id: string,
     params: VendorCreditUpdateParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<QbdVendorCredit> {
+  ): Core.APIPromise<VendorCredit> {
     const { 'Conductor-End-User-Id': conductorEndUserId, ...body } = params;
     return this._client.post(`/quickbooks-desktop/vendor-credits/${id}`, {
       body,
@@ -55,9 +55,9 @@ export class VendorCredits extends APIResource {
   list(
     params: VendorCreditListParams,
     options?: Core.RequestOptions,
-  ): Core.PagePromise<QbdVendorCreditsCursorPage, QbdVendorCredit> {
+  ): Core.PagePromise<VendorCreditsCursorPage, VendorCredit> {
     const { 'Conductor-End-User-Id': conductorEndUserId, ...query } = params;
-    return this._client.getAPIList('/quickbooks-desktop/vendor-credits', QbdVendorCreditsCursorPage, {
+    return this._client.getAPIList('/quickbooks-desktop/vendor-credits', VendorCreditsCursorPage, {
       query,
       ...options,
       headers: { 'Conductor-End-User-Id': conductorEndUserId, ...options?.headers },
@@ -65,9 +65,9 @@ export class VendorCredits extends APIResource {
   }
 }
 
-export class QbdVendorCreditsCursorPage extends CursorPage<QbdVendorCredit> {}
+export class VendorCreditsCursorPage extends CursorPage<VendorCredit> {}
 
-export interface QbdVendorCredit {
+export interface VendorCredit {
   /**
    * The unique identifier assigned by QuickBooks to this vendor credit. This ID is
    * unique across all transaction types.
@@ -99,13 +99,13 @@ export interface QbdVendorCredit {
    * standard international values. For user-defined currencies, all values are
    * editable.
    */
-  currency: QbdVendorCredit.Currency | null;
+  currency: VendorCredit.Currency | null;
 
   /**
    * The custom fields for the vendor credit object, added as user-defined data
    * extensions, not included in the standard QuickBooks object.
    */
-  customFields: Array<QbdVendorCredit.CustomField>;
+  customFields: Array<VendorCredit.CustomField>;
 
   /**
    * The market exchange rate between this vendor credit's currency and the home
@@ -117,7 +117,7 @@ export interface QbdVendorCredit {
   /**
    * The vendor credit's expense lines, each representing one line in this expense.
    */
-  expenseLines: Array<QbdVendorCredit.ExpenseLine>;
+  expenseLines: Array<VendorCredit.ExpenseLine>;
 
   /**
    * A globally unique identifier (GUID) you, the developer, can provide for tracking
@@ -130,13 +130,13 @@ export interface QbdVendorCredit {
    * items bundled together because they are commonly purchased together or grouped
    * for faster entry.
    */
-  itemLineGroups: Array<QbdVendorCredit.ItemLineGroup>;
+  itemLineGroups: Array<VendorCredit.ItemLineGroup>;
 
   /**
    * The vendor credit's item lines, each representing the purchase of a specific
    * item or service.
    */
-  itemLines: Array<QbdVendorCredit.ItemLine>;
+  itemLines: Array<VendorCredit.ItemLine>;
 
   /**
    * The vendor credit's linked transactions, such as payments applied, credits used,
@@ -146,7 +146,7 @@ export interface QbdVendorCredit {
    * fetching a list of vendor credits to receive this field because it is not
    * returned by default.
    */
-  linkedTransactions: Array<QbdVendorCredit.LinkedTransaction>;
+  linkedTransactions: Array<VendorCredit.LinkedTransaction>;
 
   /**
    * A memo or note for this vendor credit.
@@ -172,7 +172,7 @@ export interface QbdVendorCredit {
    * **IMPORTANT**: If this vendor credit is linked to other transactions, this A/P
    * account must match the `payablesAccount` used in those other transactions.
    */
-  payablesAccount: QbdVendorCredit.PayablesAccount | null;
+  payablesAccount: VendorCredit.PayablesAccount | null;
 
   /**
    * The case-sensitive user-defined reference number for this vendor credit, which
@@ -199,7 +199,7 @@ export interface QbdVendorCredit {
    * tax (via the "Do You Charge Sales Tax?" preference), it will assign the default
    * non-taxable code to all sales.
    */
-  salesTaxCode: QbdVendorCredit.SalesTaxCode | null;
+  salesTaxCode: VendorCredit.SalesTaxCode | null;
 
   /**
    * The date of this vendor credit, in ISO 8601 format (YYYY-MM-DD).
@@ -216,10 +216,10 @@ export interface QbdVendorCredit {
   /**
    * The vendor who sent this vendor credit for goods or services purchased.
    */
-  vendor: QbdVendorCredit.Vendor;
+  vendor: VendorCredit.Vendor;
 }
 
-export namespace QbdVendorCredit {
+export namespace VendorCredit {
   /**
    * The vendor credit's currency. For built-in currencies, the name and code are
    * standard international values. For user-defined currencies, all values are
@@ -2653,12 +2653,12 @@ export interface VendorCreditListParams extends CursorPageParams {
   vendorIds?: Array<string>;
 }
 
-VendorCredits.QbdVendorCreditsCursorPage = QbdVendorCreditsCursorPage;
+VendorCredits.VendorCreditsCursorPage = VendorCreditsCursorPage;
 
 export declare namespace VendorCredits {
   export {
-    type QbdVendorCredit as QbdVendorCredit,
-    QbdVendorCreditsCursorPage as QbdVendorCreditsCursorPage,
+    type VendorCredit as VendorCredit,
+    VendorCreditsCursorPage as VendorCreditsCursorPage,
     type VendorCreditCreateParams as VendorCreditCreateParams,
     type VendorCreditRetrieveParams as VendorCreditRetrieveParams,
     type VendorCreditUpdateParams as VendorCreditUpdateParams,
