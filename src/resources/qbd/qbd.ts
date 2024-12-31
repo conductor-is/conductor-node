@@ -280,13 +280,13 @@ import {
 } from './transfers';
 import * as VendorCreditsAPI from './vendor-credits';
 import {
-  QbdVendorCredit,
-  QbdVendorCreditsCursorPage,
+  VendorCredit,
   VendorCreditCreateParams,
   VendorCreditListParams,
   VendorCreditRetrieveParams,
   VendorCreditUpdateParams,
   VendorCredits,
+  VendorCreditsCursorPage,
 } from './vendor-credits';
 import * as VendorsAPI from './vendors';
 import {
@@ -338,8 +338,8 @@ export class Qbd extends APIResource {
   standardTerms: StandardTermsAPI.StandardTerms = new StandardTermsAPI.StandardTerms(this._client);
   subtotalItems: SubtotalItemsAPI.SubtotalItems = new SubtotalItemsAPI.SubtotalItems(this._client);
   transfers: TransfersAPI.Transfers = new TransfersAPI.Transfers(this._client);
-  vendors: VendorsAPI.Vendors = new VendorsAPI.Vendors(this._client);
   vendorCredits: VendorCreditsAPI.VendorCredits = new VendorCreditsAPI.VendorCredits(this._client);
+  vendors: VendorsAPI.Vendors = new VendorsAPI.Vendors(this._client);
 }
 
 Qbd.Accounts = Accounts;
@@ -392,10 +392,10 @@ Qbd.SubtotalItems = SubtotalItems;
 Qbd.SubtotalItemsCursorPage = SubtotalItemsCursorPage;
 Qbd.Transfers = Transfers;
 Qbd.TransfersCursorPage = TransfersCursorPage;
+Qbd.VendorCredits = VendorCredits;
+Qbd.VendorCreditsCursorPage = VendorCreditsCursorPage;
 Qbd.Vendors = Vendors;
 Qbd.VendorsCursorPage = VendorsCursorPage;
-Qbd.VendorCredits = VendorCredits;
-Qbd.QbdVendorCreditsCursorPage = QbdVendorCreditsCursorPage;
 
 export declare namespace Qbd {
   export {
@@ -676,6 +676,16 @@ export declare namespace Qbd {
   };
 
   export {
+    VendorCredits as VendorCredits,
+    type VendorCredit as VendorCredit,
+    VendorCreditsCursorPage as VendorCreditsCursorPage,
+    type VendorCreditCreateParams as VendorCreditCreateParams,
+    type VendorCreditRetrieveParams as VendorCreditRetrieveParams,
+    type VendorCreditUpdateParams as VendorCreditUpdateParams,
+    type VendorCreditListParams as VendorCreditListParams,
+  };
+
+  export {
     Vendors as Vendors,
     type Vendor as Vendor,
     VendorsCursorPage as VendorsCursorPage,
@@ -683,15 +693,5 @@ export declare namespace Qbd {
     type VendorRetrieveParams as VendorRetrieveParams,
     type VendorUpdateParams as VendorUpdateParams,
     type VendorListParams as VendorListParams,
-  };
-
-  export {
-    VendorCredits as VendorCredits,
-    type QbdVendorCredit as QbdVendorCredit,
-    QbdVendorCreditsCursorPage as QbdVendorCreditsCursorPage,
-    type VendorCreditCreateParams as VendorCreditCreateParams,
-    type VendorCreditRetrieveParams as VendorCreditRetrieveParams,
-    type VendorCreditUpdateParams as VendorCreditUpdateParams,
-    type VendorCreditListParams as VendorCreditListParams,
   };
 }
