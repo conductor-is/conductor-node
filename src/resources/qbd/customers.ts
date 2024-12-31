@@ -189,12 +189,8 @@ export interface Customer {
   email: string | null;
 
   /**
-   * A globally unique identifier (GUID) you can provide for tracking this object in
-   * your external system.
-   *
-   * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
-   * return an error. This field is immutable and can only be set during object
-   * creation.
+   * A globally unique identifier (GUID) you, the developer, can provide for tracking
+   * this object in your external system.
    */
   externalId: string | null;
 
@@ -1154,8 +1150,8 @@ export interface CustomerCreateParams {
   email?: string;
 
   /**
-   * Body param: A globally unique identifier (GUID) you can provide for tracking
-   * this object in your external system.
+   * Body param: A globally unique identifier (GUID) you, the developer, can provide
+   * for tracking this object in your external system.
    *
    * **IMPORTANT**: Must be formatted as a valid GUID; otherwise, QuickBooks will
    * return an error. This field is immutable and can only be set during object
