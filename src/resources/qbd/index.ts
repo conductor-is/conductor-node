@@ -171,15 +171,6 @@ export {
 } from './purchase-orders';
 export { Qbd } from './qbd';
 export {
-  QbdVendorCreditsCursorPage,
-  VendorCredits,
-  type QbdVendorCredit,
-  type VendorCreditCreateParams,
-  type VendorCreditRetrieveParams,
-  type VendorCreditUpdateParams,
-  type VendorCreditListParams,
-} from './vendor-credits';
-export {
   ReceivePaymentsCursorPage,
   ReceivePayments,
   type ReceivePayment,
@@ -259,6 +250,15 @@ export {
   type TransferUpdateParams,
   type TransferListParams,
 } from './transfers';
+export {
+  VendorCreditsCursorPage,
+  VendorCredits,
+  type VendorCredit,
+  type VendorCreditCreateParams,
+  type VendorCreditRetrieveParams,
+  type VendorCreditUpdateParams,
+  type VendorCreditListParams,
+} from './vendor-credits';
 export {
   VendorsCursorPage,
   Vendors,
