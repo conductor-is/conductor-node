@@ -1,6 +1,6 @@
 {
   "name": "conductor-node",
-  "version": "11.9.0",
+  "version": "11.10.0",
   "description": "The official TypeScript library for the Conductor API",
   "author": "Conductor <support@conductor.is>",
   "types": "dist/index.d.ts",
