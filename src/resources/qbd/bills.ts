@@ -68,7 +68,7 @@ export interface Bill {
    * This equals the sum of the amounts in the bill's expense lines, item lines, and
    * item group lines. It also equals `openAmount` plus any credits or discounts.
    */
-  amountDue: string;
+  amountDue: string | null;
 
   /**
    * The monetary amount due for this bill converted to the home currency of the
