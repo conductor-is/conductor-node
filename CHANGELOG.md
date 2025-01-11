@@ -1,5 +1,18 @@
 # Changelog
 
+## 11.11.0 (2025-01-11)
+
+Full Changelog: [v11.10.0...v11.11.0](https://github.com/conductor-is/conductor-node/compare/v11.10.0...v11.11.0)
+
+### Features
+
+* **api:** api update ([#30](https://github.com/conductor-is/conductor-node/issues/30)) ([b35d6ab](https://github.com/conductor-is/conductor-node/commit/b35d6ab0507fa1cc469832abfb662f0e63ff257f))
+
+
+### Chores
+
+* **internal:** codegen related update ([#32](https://github.com/conductor-is/conductor-node/issues/32)) ([9816c02](https://github.com/conductor-is/conductor-node/commit/9816c020502be52673d427bbaa2d659282f43729))
+
 ## 11.10.0 (2025-01-01)
 
 Full Changelog: [v11.9.0...v11.10.0](https://github.com/conductor-is/conductor-node/compare/v11.9.0...v11.10.0)
